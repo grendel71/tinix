@@ -6,7 +6,7 @@
 }:
 
 stdenv.mkDerivation rec {
-  pname = "studio-link";
+  pname = "ti-tools";
   version = "0.2.0";
   version2 = "24";
 
@@ -36,8 +36,8 @@ stdenv.mkDerivation rec {
   '';
 
   meta = with lib; {
-    homepage = "https://studio-link.com";
-    description = "Voip transfer";
+    homepage = "https://github.com/cqb13/ti-tools";
+    description = "tilp tools";
     platforms = platforms.linux;
   };
 }
