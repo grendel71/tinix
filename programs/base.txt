@@ -1,0 +1,29 @@
+BINOM
+Created by TI Connect CE 5.6.3.2278
+Program
+RAM
+accessible
+TI-84+
+"123456789ABCDEF->Str3:While 1
+Input "BASE ",A:Input "BASE ",B:Repeat not(C
+Input Str1
+DelVar CDelVar D" ->Str2
+If "~"=sub(Str1,1,1:"~->Str2
+For(X,1,length(Str1
+D+not(not(D->D
+If "."=sub(Str1,X,1:Then:1->D
+X+1->X:End
+inString(Str3,sub(Str1,X,1
+CA^not(D)+AnsA^~D(Ans<A->C
+End:C+C|E~12->D
+int(logBASE(D+not(D),B->Y
+For(X,max(0,Y),Y-logBASE(|E11,B),~1:If X=~1
+Str2+".->Str2
+Str2+sub("0"+Str3,1+remainder(int(D/B^X),B),1->Str2
+If 0>=X and not(fPart(DBB/B^X)fPart(C/B^X
+~99->X:End
+For(X,X,0,~1
+Str2+"O->Str2
+End:length(Str2:For(X,1,Ans,16
+Disp sub(Str2,X,min(16,1+Ans-X
+End:End:End

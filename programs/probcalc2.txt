@@ -1,0 +1,68 @@
+PROBCALC
+Single file dated Sun Nov 16 17:07:59 20
+Program
+RAM
+accessible
+latest
+ClrHome
+Lbl M
+Menu("DISTRIBUTIONS","POISSON",1,"NEG BINOM",2,"GEOMETRIC",3,"HYPERGEOM",4,"QUIT",Q)
+
+Lbl 1
+ClrHome
+Disp "POISSON: P(X=k)"
+Disp "Enter L (mean):"
+Prompt L
+Disp "Enter K (value):"
+Prompt K
+e^^(~L)*(L^K/K!)->P
+Disp "P=",P
+Pause 
+Goto M
+
+Lbl 2
+ClrHome
+Disp "NEG BINOM: P(X=k)"
+Disp "Enter R (number of successes):"
+Prompt R
+Disp "Enter S (success probability):"
+Prompt S
+Disp "Enter K (trial number):"
+Prompt K
+(K-1 nCr R-1)*S^R*(1-S)^(K-R)->A
+Disp "P=",A
+Pause 
+Goto M
+
+Lbl 3
+ClrHome
+Disp "GEOMETRIC: P(X=k)"
+Disp "Enter S (success probability):"
+Prompt S
+Disp "Enter K (trial number):"
+Prompt K
+(1-S)^(K-1)*S->G
+Disp "P=",G
+Pause 
+Goto M
+
+Lbl 4
+ClrHome
+Disp "HYPERGEOMETRIC"
+Disp "Enter N (population size):"
+Prompt N
+Disp "Enter G (number of successes in population):"
+Prompt G
+Disp "Enter n (sample size):"
+Prompt Z
+Disp "Enter K (successes in sample):"
+Prompt K
+((G nCr K)*(N-G nCr Z-K))/(N nCr Z)->H
+Disp "P=",H
+Pause 
+Goto M
+
+Lbl Q
+ClrHome
+Disp "GOODBYE"
+Stop

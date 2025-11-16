@@ -1,0 +1,27 @@
+BINOM
+Created by TI Connect CE 5.6.3.2278
+Program
+RAM
+accessible
+TI-84+
+ClrHome
+Disp "BINOMIAL SOLVER"
+Disp "n = number trials"
+Prompt N
+Disp "p = success prob"
+Prompt P
+Disp "x = value"
+Prompt X
+ClrHome
+Disp "P(X= x )"
+binompdf(N,P,X)->A
+Disp A
+Disp "P(X<=x), x trials and all below x"
+binomcdf(N,P,X)->B
+Disp B
+Disp "P(X>=x)"
+1-binomcdf(N,P,X-1)->C
+Disp C
+Disp "P(X>x)"
+1-binomcdf(N,P,X)->D
+Disp D
